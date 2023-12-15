@@ -1,0 +1,8 @@
+{
+    "name": "Jester_Plays_Darude_Sandstorm",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/OE100/JesterWindUp",
+    "description": "Makes the jester wind up sound play 'Darude Sandstorm'.",
+    "dependencies": [
+    ]
+}
