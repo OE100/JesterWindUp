@@ -17,7 +17,7 @@ namespace JesterWindUp.Patches
 
         [HarmonyPatch("Start")]
         [HarmonyPostfix]
-        public static void patchJesterCrankSound(JesterAI __instance)
+        public static void patchJesterWindUpSound(JesterAI __instance)
         {
             Plugin.log.LogInfo("Patching JesterAI...");
             if (jesterWindUp == null)
@@ -29,6 +29,7 @@ namespace JesterWindUp.Patches
                     return;
                 }
                 jesterWindUp = ab.LoadAsset<AudioClip>("jester_wind_up.mp3");
+                __instance.popGoesTheWeaselTheme = jesterWindUp;
             }
         }
     }
