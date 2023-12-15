@@ -29,8 +29,8 @@ namespace JesterWindUp.Patches
                     return;
                 }
                 jesterWindUp = ab.LoadAsset<AudioClip>("jester_wind_up.mp3");
-                __instance.popGoesTheWeaselTheme = jesterWindUp;
             }
+            __instance.popGoesTheWeaselTheme = jesterWindUp;
         }
     }
 }
