@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -22,7 +23,7 @@ namespace JesterWindUp.Patches
             Plugin.log.LogInfo("Patching JesterAI...");
             if (jesterWindUp == null)
             {
-                AssetBundle ab = AssetBundle.LoadFromFile(Paths.PluginPath + "\\OE_Tweaks\\Sounds\\jestersounds");
+                AssetBundle ab = AssetBundle.LoadFromStream(Assembly.GetExecutingAssembly().GetManifestResourceStream(Assembly.GetExecutingAssembly().GetManifestResourceNames()[0]));
                 if (ab == null)
                 {
                     Plugin.log.LogError("Failed to load jestersounds asset bundle");
